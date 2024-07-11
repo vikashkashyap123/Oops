@@ -9,17 +9,18 @@ public:
     // Teacher(){
     //     dept = "IT";
     // }
-    //parametrized constructor
-    Teacher(string n,string d,string s,double sal){
-        name = n;
-        dept = d;
-        subject = s;
-        salary = sal;
-    }
     //properties /attributes
     string name;
     string dept;
     string subject;
+    //parametrized constructor
+    Teacher(string name,string dept,string subject,double salary){
+        this->name = name;
+        this->dept = dept;
+        this->subject = subject;
+        this->salary = salary;
+    }
+    
 
     void getInfo(){
         cout<<"name: "<<name<<endl;
