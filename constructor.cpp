@@ -30,7 +30,9 @@ public:
 int main(){
     //constructor call
     Teacher t1("vikash","IT","C++",25000);
-    t1.getInfo();
+    // t1.getInfo();
     // cout<<t1.dept<<endl;
+    Teacher t2(t1);  //default copy constructor
+    t2.getInfo();
     return 0;
 }
