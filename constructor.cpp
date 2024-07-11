@@ -20,7 +20,14 @@ public:
         this->subject = subject;
         this->salary = salary;
     }
-    
+    //custom copy constructor
+    Teacher(Teacher &orgObj){
+        cout<<"i am custom copy constructor"<<endl;
+        this->name=orgObj.name;
+        this->dept=orgObj.dept;
+        this->subject=orgObj.subject;
+        this->salary=orgObj.salary;
+    }
 
     void getInfo(){
         cout<<"name: "<<name<<endl;
@@ -32,7 +39,8 @@ int main(){
     Teacher t1("vikash","IT","C++",25000);
     // t1.getInfo();
     // cout<<t1.dept<<endl;
-    Teacher t2(t1);  //default copy constructor
+    // Teacher t2(t1);  //default copy constructor
+    Teacher t2(t1); //custom copy constructor
     t2.getInfo();
     return 0;
 }
